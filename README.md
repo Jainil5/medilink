@@ -24,6 +24,21 @@ It does **not replace doctors** and should only be used as a support tool.
 
 ---
 
+## Application Screenshots
+
+### 1. Patient Intake & Demo Input
+![Patient Intake Demo](backend/app/test/input-demo.png)
+
+This screenshot shows the demo patient intake conversation and image input used to generate the clinical report.
+
+---
+
+### 2. Clinical Report – SOAP Notes & XAI Output
+![Clinical Report Demo](backend/app/test/result-demo.png)
+
+This screenshot shows the generated clinical report, including SOAP notes, diagnosis, confidence score, and XAI heatmap visualization.
+
+
 
 ---
 
