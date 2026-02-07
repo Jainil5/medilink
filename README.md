@@ -42,22 +42,6 @@ It does **not replace doctors** and should only be used as a support tool.
    - SOAP notes on the left side  
    - Diagnosis, confidence score, and XAI image on the right side  
 
----
-
-## Demo Mode
-
-The application includes a **Run Demo Case** option.
-
-Demo mode automatically loads:
-- A sample patient conversation  
-- A predefined medical image  
-
-This is useful for:
-- Testing the application  
-- Academic demonstrations  
-- Presentations  
-
----
 
 ## Technologies Used
 
