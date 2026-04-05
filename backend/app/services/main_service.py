@@ -3,14 +3,19 @@ from .summarize_chat import summarize_conversation
 from .soap_notes_generator import get_soap_notes
 
 
-
-
-
 def generate_clinical_report(conversation, image_path):
     chats = []
-    for i in conversation["conversation"]:
-        if i["role"] == "patient":
-            chats.append(i["message"])
+    
+    # Extract items regardless if it's a dict (native testing) or list (from FastAPI endpoint)
+    items = conversation.get("conversation", []) if isinstance(conversation, dict) else conversation
+    
+    for i in items:
+        # Extract role and message handling both dicts and Pydantic Message models
+        role = i["role"] if isinstance(i, dict) else getattr(i, "role", "")
+        message = i["message"] if isinstance(i, dict) else getattr(i, "message", "")
+        
+        if role == "patient":
+            chats.append(message)
     # print(chats)        
     summary = summarize_conversation(str(chats))
     image_result = run_test(image_path)

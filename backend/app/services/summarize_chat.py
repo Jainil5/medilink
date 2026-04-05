@@ -50,6 +50,7 @@ def summarize_conversation(conversation_text):
     return response.content
 
 
+
 inp = """EXAMPLE 2
 
             Conversation:
@@ -64,4 +65,4 @@ inp = """EXAMPLE 2
 """
 
 
-print(summarize_conversation(inp))
+# print(summarize_conversation(inp))

@@ -25,7 +25,7 @@ NUM_CLASSES = 7
 IMAGE_SIZE = 224
 BATCH_SIZE = 16
 
-MODELS_DIR = "backend/services/outputs/saved_models"
+MODELS_DIR = "backend/app/services/outputs/saved_models"
 
 DEVICE = (
     "mps" if torch.backends.mps.is_available()

@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.image import show_cam_on_image
 
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_LIST = [
     "vit_base_patch16_224",
     "swin_tiny_patch4_window7_224",
@@ -20,7 +20,7 @@ MODEL_LIST = [
 IMAGE_SIZE = 224
 NUM_CLASSES = 7
 
-MODELS_DIR = "services/outputs/saved_models"
+MODELS_DIR = os.path.join(BASE_DIR, 'outputs', 'saved_models')
 
 
 LABEL_MAP = {
@@ -78,7 +78,7 @@ def load_model(name):
     return model
 
 
-models = {name: load_model(name) for name in MODEL_LIST}
+models = {name: load_model( name) for name in MODEL_LIST}
 resnet_model = models["resnet50"]
 
 
@@ -234,22 +234,50 @@ def run_test(image_path):
         vis_img
     )
 
+    test_image_name = os.path.basename(image_path)
+    output_path = os.path.join(BASE_DIR, 'test/output', f"test_{test_image_name}")
+    # print(output_path)
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     save_matplotlib_merge(
         plain_img,
         bordered,
         heatmap,
         full_label,
         conf,
-        "test/merged_result.png"
+        output_path
     )
-    print(conf)
+    # print(conf)
 
     return {
         "prediction": full_label,
         "confidence": float(conf),
-        "xai_image": "/Users/jainil/Documents/development/medilink/backend/app/test/merged_result.png"
+        "xai_image": output_path
     }
 
-# print(run_test(
-#     "datasets/HAM10000/HAM10000_images_part_1/ISIC_0024350.jpg"
-# ))
+
+def run_on_folder(folder_path):
+    if not os.path.isdir(folder_path):
+        print(f"Error: {folder_path} is not a valid directory.")
+        return []
+
+    results = []
+    valid_extensions = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
+    for filename in os.listdir(folder_path):
+        ext = os.path.splitext(filename)[1].lower()
+        if ext in valid_extensions:
+            image_path = os.path.join(folder_path, filename)
+            try:
+                print(f"\nProcessing: {filename}")
+                res = run_test(image_path)
+                results.append(res)
+            except Exception as e:
+                print(f"Failed to process {filename}: {e}")
+    
+    return results
+
+print(run_test(
+            "datasets/ddidiversedermatologyimages/images/000001.png"
+        ))
+
+# print(run_on_folder("backend/app/services/test/indian_images"))    
+        

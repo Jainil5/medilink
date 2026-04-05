@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
-from services.main_service import generate_clinical_report
+from .services.main_service import generate_clinical_report
 
 app = FastAPI(title="Medilink Backend API")
 
@@ -18,7 +18,7 @@ class ReportRequest(BaseModel):
 
 @app.post("/generate-report")
 async def generate_report(data: ReportRequest):
-
+    print("called")
     result = generate_clinical_report(
         data.conversation,
         data.image_path
