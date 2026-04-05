@@ -12,15 +12,10 @@ It does **not replace doctors** and should only be used as a support tool.
 
 ## Features
 
-- Chat-based patient intake  
-- Guided clinical questioning  
-- Medical image upload  
-- AI-assisted diagnosis prediction  
-- Confidence score for predictions  
-- SOAP notes generation  
-- Explainable AI (XAI) heatmap visualization  
-- Demo mode with sample patient data  
-- Clean, hospital-style user interface  
+- Chat-based patient information and case intake    
+- Medical image upload and AI-assisted diagnosis prediction  
+- SOAP notes generation based on user input and predictions.
+- Explainable AI (XAI) heatmap visualization for the elimination of black-box issues.    
 
 ---
 
