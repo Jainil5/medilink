@@ -1,0 +1,13 @@
+id,disease,confidence,soap_notes,critical
+1,Melanoma,0.94,"S: Patient reports rapidly growing dark lesion. O: Irregular borders, asymmetry. A: Suspicious melanoma. P: Urgent biopsy recommended.",high
+2,Basal Cell Carcinoma,0.88,"S: Non-healing lesion on nose. O: Pearly nodular appearance. A: Likely BCC. P: Dermatology referral.",medium
+3,Melanocytic Nevus,0.76,"S: Stable mole since years. O: Symmetrical, uniform color. A: Benign nevus. P: Routine monitoring.",low
+4,Actinic Keratoses and Intraepithelial Carcinoma,0.91,"S: Rough scaly patch on sun-exposed area. O: Erythematous lesion. A: Pre-cancerous AK. P: Cryotherapy advised.",high
+5,Benign Keratosis-like Lesions,0.82,"S: Patient complains of rough skin lesion. O: Waxy, stuck-on appearance. A: Benign keratosis. P: No urgent action.",low
+6,Melanoma,0.89,"S: Change in size and color of mole. O: Dark irregular lesion. A: Possible melanoma. P: Immediate biopsy.",high
+7,Dermatofibroma,0.74,"S: Firm nodule on leg. O: Dimple sign positive. A: Dermatofibroma. P: Reassurance.",low
+8,Vascular Lesions,0.79,"S: Red lesion noted. O: Blanching on pressure. A: Vascular lesion. P: Observation.",low
+9,Basal Cell Carcinoma,0.86,"S: Ulcerated lesion on cheek. O: Raised borders. A: BCC suspected. P: Surgical consult.",medium
+10,Actinic Keratoses and Intraepithelial Carcinoma,0.84,"S: Sun-damaged skin patch. O: Rough texture. A: AK. P: Topical therapy.",medium
+11,Melanoma,0.96,"S: Rapid evolution of lesion. O: Asymmetry, multiple colors. A: High-risk melanoma. P: Emergency referral.",high
+12,Melanocytic Nevus,0.72,"S: Small pigmented lesion. O: Uniform shape. A: Benign nevus. P: No treatment needed.",low

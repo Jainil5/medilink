@@ -15,23 +15,36 @@ It does **not replace doctors** and should only be used as a support tool.
 - Chat-based patient information and case intake    
 - Medical image upload and AI-assisted diagnosis prediction  
 - SOAP notes generation based on user input and predictions.
-- Explainable AI (XAI) heatmap visualization for the elimination of black-box issues.    
+- Explainable AI (XAI) heatmap visualization for the elimination of black-box issues.
+- Patient Priority Queue for sorting cases by clinical urgency.
+- Ensemble Model Evaluation dashboard comparing various CNN and Transformer models.
 
 ---
 
 ## Application Screenshots
 
 ### 1. Patient Intake & Demo Input
-![Patient Intake Demo](backend/app/test/input-demo.png)
+![Patient Intake Demo](demo/input-demo.png)
 
 This screenshot shows the demo patient intake conversation and image input used to generate the clinical report.
 
 ---
 
 ### 2. Clinical Report – SOAP Notes & XAI Output
-![Clinical Report Demo](backend/app/test/result-demo.png)
+![Clinical Report Demo](demo/result-demo.png)
 
 This screenshot shows the generated clinical report, including SOAP notes, diagnosis, confidence score, and XAI heatmap visualization.
+
+### 3. Patient Prioritization & Analysis
+![Patient Prioritization & Analysis](demo/patient-priority.jpeg)
+
+This screenshot shows the patient prioritization and analysis based on the AI predictions.
+
+### 4. Models Accuracy Comparison
+![Models Accuracy Comparison](demo/model-comparison.png)
+
+This screenshot shows the model accuracy comparison.
+
 
 
 
@@ -146,7 +159,7 @@ uvicorn app.main:app --reload
 ```
 ### 2. Run the frontend 
 ```bash
-streamlit run app.py
+streamlit run app/ui.py
 ```
 
 

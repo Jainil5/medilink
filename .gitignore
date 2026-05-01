@@ -1,4 +1,4 @@
-__pycache__/
+*__pycache__/
 *.py[cod]
 *.pyo
 *.pyd
@@ -17,6 +17,9 @@ env/
 data/
 datasets/
 saved_models/
+*saved_models/*
+app/services/outputs/saved_models
+
 models/*.h5
 models/*.pt
 models/*.pth
@@ -24,7 +27,6 @@ models/*.onnx
 
 logs/
 *.log
-outputs/
 results/
 
 .DS_Store
@@ -38,3 +40,5 @@ docker-data/
 
 *.tar.gz
 *.zip
+
+demo/demo_images
