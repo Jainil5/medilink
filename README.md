@@ -24,7 +24,7 @@ It does **not replace doctors** and should only be used as a support tool.
 ## Application Screenshots
 
 ### 1. Patient Intake & Demo Input
-![Patient Intake Demo](demo/input-demo.png)
+![Patient Intake Demo](backend/app/test/input-demo.png)
 
 This screenshot shows the demo patient intake conversation and image input used to generate the clinical report.
 
