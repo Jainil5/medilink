@@ -23,24 +23,19 @@ It does **not replace doctors** and should only be used as a support tool.
 
 ## Application Screenshots
 
-### 1. Patient Intake & Demo Input
-![Patient Intake Demo](backend/app/test/input-demo.png)
-
-This screenshot shows the demo patient intake conversation and image input used to generate the clinical report.
-
 ---
 
-### 2. Clinical Report – SOAP Notes & XAI Output
+### 1. Clinical Report – SOAP Notes & XAI Output
 ![Clinical Report Demo](demo/result-demo.png)
 
 This screenshot shows the generated clinical report, including SOAP notes, diagnosis, confidence score, and XAI heatmap visualization.
 
-### 3. Patient Prioritization & Analysis
+### 2. Patient Prioritization & Analysis
 ![Patient Prioritization & Analysis](demo/patient-priority.jpeg)
 
 This screenshot shows the patient prioritization and analysis based on the AI predictions.
 
-### 4. Models Accuracy Comparison
+### 3. Models Accuracy Comparison
 ![Models Accuracy Comparison](demo/model-comparison.png)
 
 This screenshot shows the model accuracy comparison.
