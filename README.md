@@ -66,6 +66,11 @@ This screenshot shows the model accuracy comparison.
    - Diagnosis, confidence score, and XAI image on the right side  
 
 
+## Datasets
+
+1. HAM10000: https://arxiv.org/abs/1803.10417
+2. MRA MIDAS: https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer
+
 ## Technologies Used
 
 ### Frontend
